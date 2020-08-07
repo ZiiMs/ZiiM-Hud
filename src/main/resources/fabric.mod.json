@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "ziim_hud",
+  "version": "${version}",
+
+  "name": "ZiiM Hud",
+  "description": "A basic hud mod.",
+  "authors": [
+    "ZiiM"
+  ],
+  "contact": {
+  },
+
+  "license": "MIT",
+  "icon": "assets/ziimhud/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.ziim.hud.ZiiMHud"
+    ],
+    "modmenu": [
+      "me.ziim.hud.config.ZHModMenuEntry"
+    ]
+  },
+  "mixins": [
+    "ZiiMHud.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": ">=0.3.0",
+    "minecraft": "1.16.x"
+  },
+  "recommends": {
+    "modmenu": ">=1.12.0"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

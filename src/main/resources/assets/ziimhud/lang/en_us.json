@@ -1,0 +1,22 @@
+{
+  "ziimhud.config.title": "ZiiM Hud",
+
+  "ziimhud.config.category.world": "World Info",
+  "ziimhud.config.category.player": "Player Info",
+  "ziimhud.config.category.network": "Network Info",
+
+  "ziimhud.config.option.showBiome": "Toggle Biome",
+  "ziimhud.config.option.showPos": "Toggle Position",
+  "ziimhud.config.option.showNetherPos": "Toggle Nether Position",
+  "ziimhud.config.option.showDirection": "Toggle Direction",
+
+
+  "ziimhud.config.option.showEffects": "Toggle Effects",
+  "ziimhud.config.option.showArmor": "Toggle Armor",
+  "ziimhud.config.option.showXP": "Toggle XP",
+
+
+  "ziimhud.config.option.showIP": "Toggle IP",
+  "ziimhud.config.option.showPing": "Toggle Ping",
+  "ziimhud.config.option.ShowFPS": "Toggle FPS"
+}
