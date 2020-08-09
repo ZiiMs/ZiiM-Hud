@@ -8,32 +8,33 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.MinecraftClientGame;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.Drawable;
-import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.network.ClientPlayNetworkHandler;
+import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.packet.s2c.play.PlayerListS2CPacket;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 @Environment(EnvType.CLIENT)
 public class DrawUI implements Drawable {
     private final MinecraftClient client;
     private final TextRenderer text;
     int height;
-    private ClientPlayerEntity player;
+    private PlayerEntity player;
 
     public DrawUI(MinecraftClient client) {
         this.client = client;
@@ -50,89 +51,217 @@ public class DrawUI implements Drawable {
     }
 
     private void drawRightStats() {
-
-        String coords = "Pos:§7 " + getCoords();
-        String netherCoords = "Nether Pos:§7 " + getNetherCoords();
-        String direction = getDirection();
         if (ZiiMHud.config().armor) {
             drawEquipmentInfo();
         }
 
-        height = this.text.fontHeight + 2;
-        int scaleHeight = this.client.getWindow().getScaledHeight();
+
         int scaleWidth = this.client.getWindow().getScaledWidth();
         MatrixStack stack = new MatrixStack();
-        if (ZiiMHud.config().direction) {
-            this.text.drawWithShadow(stack, direction, scaleWidth - this.text.getWidth(direction) - 2, scaleHeight - height, 0xFFFFFF);
-            scaleHeight -= height;
-        }
-        if (ZiiMHud.config().netherPos) {
-            this.text.drawWithShadow(stack, netherCoords, scaleWidth - this.text.getWidth(netherCoords) - 2, scaleHeight - height, 0xFFFFFF);
-            scaleHeight -= height;
-        }
-        if (ZiiMHud.config().pos) {
-            this.text.drawWithShadow(stack, coords, scaleWidth - this.text.getWidth(coords) - 2, scaleHeight - height, 0xFFFFFF);
-            scaleHeight -= height;
-        }
-        if (ZiiMHud.config().biome) {
-            String biome = "Biome: §7" + this.player.getEntityWorld().getBiome(this.player.getBlockPos()).getName().getString();
-            this.text.drawWithShadow(stack, biome, scaleWidth - this.text.getWidth(biome) - 2, scaleHeight - height, 0xFFFFFF);
-            scaleHeight -= height;
-        }
-        if (ZiiMHud.config().xp) {
-            float percent = this.player.experienceProgress * 100;
-            String xp = String.format("XP:§7 %.0f%%", percent);
-            this.text.drawWithShadow(stack, xp, scaleWidth - this.text.getWidth(xp) - 2, scaleHeight - height, 0xFFFFFF);
-            scaleHeight -= height;
-        }
 
-        if (this.client.player != null && ZiiMHud.config().effects) {
-            Map<StatusEffect, StatusEffectInstance> effects = this.client.player.getActiveStatusEffects();
-            for (Map.Entry<StatusEffect, StatusEffectInstance> effect : effects.entrySet()) {
-                String effectName = I18n.translate(effect.getKey().getTranslationKey());
-                String effectLvl = "";
-                if (effect.getValue().getAmplifier() >= 1 && effect.getValue().getAmplifier() <= 9) {
-                    effectLvl = I18n.translate("enchantment.level." + (effect.getValue().getAmplifier() + 1));
-                }
-                String effectDuration = secondsToString(effect.getValue().getDuration() / 20);
-
-                int color = effect.getKey().getColor();
-
-                String effectString = String.format("%s §7%s %s", effectDuration, effectName, effectLvl);
-
-                this.text.drawWithShadow(stack, effectString, scaleWidth - this.text.getWidth(effectString) - 2, scaleHeight - height, color);
+        if (ZiiMHud.config().menuPositionRight == ZiiMHudConfig.MenuPositionOptions.BOTTOM) {
+            height = this.text.fontHeight + 2;
+            int scaleHeight = this.client.getWindow().getScaledHeight();
+            if (ZiiMHud.config().direction) {
+                String direction = getDirection();
+                String direction2 = String.format("(%.1f, %.1f)", MathHelper.wrapDegrees(this.player.yaw), MathHelper.wrapDegrees(this.player.pitch));
+                drawWithShadowconcat(stack, direction, scaleWidth - this.text.getWidth(direction2) - 2, scaleHeight - height, Color.white, stack, direction2, Color.gray, false);
                 scaleHeight -= height;
+            }
+            if (ZiiMHud.config().netherPos) {
+                String netherCoords = "Nether Pos: ";
+                String netherCoords2 = getNetherCoords();
+                drawWithShadowconcat(stack, netherCoords, scaleWidth - this.text.getWidth(netherCoords2) - 2, scaleHeight - height, Color.white, stack, netherCoords2, Color.gray, false);
+                scaleHeight -= height;
+            }
+            if (ZiiMHud.config().pos) {
+                String coords = "Pos: ";
+                String coords2 = getCoords();
+                drawWithShadowconcat(stack, coords, scaleWidth - this.text.getWidth(coords2) - 2, scaleHeight - height, Color.white, stack, coords2, Color.gray, false);
+                scaleHeight -= height;
+            }
+            if (ZiiMHud.config().biome) {
+                String biome = "Biome: ";
+                String biome2 = this.player.getEntityWorld().getBiome(this.player.getBlockPos()).getName().getString();
+                drawWithShadowconcat(stack, biome, scaleWidth - this.text.getWidth(biome2) - 2, scaleHeight - height, Color.white, stack, biome2, Color.gray, false);
+                scaleHeight -= height;
+            }
+            if (ZiiMHud.config().xp) {
+                float percent = this.player.experienceProgress * 100;
+                String xp = "XP: ";
+                String xp2 = String.format("%.0f%%", percent);
+                if (!this.player.isCreative()) {
+                    drawWithShadowconcat(stack, xp, scaleWidth - this.text.getWidth(xp2) - 2, scaleHeight - height, Color.white, stack, xp2, Color.gray, false);
+                    scaleHeight -= height;
+                }
+            }
+
+            if (this.client.player != null && ZiiMHud.config().effects) {
+                Map<StatusEffect, StatusEffectInstance> effects = this.client.player.getActiveStatusEffects();
+                for (Map.Entry<StatusEffect, StatusEffectInstance> effect : effects.entrySet()) {
+                    String effectName = I18n.translate(effect.getKey().getTranslationKey());
+                    String effectLvl = "";
+                    if (effect.getValue().getAmplifier() >= 1 && effect.getValue().getAmplifier() <= 9) {
+                        effectLvl = I18n.translate("enchantment.level." + (effect.getValue().getAmplifier() + 1));
+                    }
+                    String effectDuration = secondsToString(effect.getValue().getDuration() / 20);
+
+                    int color = effect.getKey().getColor();
+
+                    String effectString = effectDuration;
+                    String effectString2 = String.format(" %s %s", effectName, effectLvl);
+
+                    drawWithShadowconcat(stack, effectString, scaleWidth - this.text.getWidth(effectString2) - 2, scaleHeight - height, color, stack, effectString2, Color.gray, false);
+                    scaleHeight -= height;
+                }
+            }
+        } else if (ZiiMHud.config().menuPositionRight == ZiiMHudConfig.MenuPositionOptions.TOP) {
+            height = this.text.fontHeight + 2;
+            int scaleHeight = 2;
+            if (ZiiMHud.config().direction) {
+                String direction = getDirection();
+                String direction2 = String.format("(%.1f, %.1f)", MathHelper.wrapDegrees(this.player.yaw), MathHelper.wrapDegrees(this.player.pitch));
+                drawWithShadowconcat(stack, direction, scaleWidth - this.text.getWidth(direction2) - 2, scaleHeight, Color.white, stack, direction2, Color.gray, false);
+                scaleHeight += height;
+            }
+            if (ZiiMHud.config().netherPos) {
+                String netherCoords = "Nether Pos: ";
+                String netherCoords2 = getNetherCoords();
+                drawWithShadowconcat(stack, netherCoords, scaleWidth - this.text.getWidth(netherCoords2) - 2, scaleHeight,  Color.white, stack, netherCoords2, Color.gray, false);
+                scaleHeight += height;
+            }
+            if (ZiiMHud.config().pos) {
+                String coords = "Pos: ";
+                String coords2 = getCoords();
+                drawWithShadowconcat(stack, coords, scaleWidth - this.text.getWidth(coords2) - 2, scaleHeight, Color.white, stack, coords2, Color.gray, false);
+                scaleHeight += height;
+            }
+            if (ZiiMHud.config().biome) {
+                String biome = "Biome: ";
+                String biome2 = this.player.getEntityWorld().getBiome(this.player.getBlockPos()).getName().getString();
+                drawWithShadowconcat(stack, biome, scaleWidth - this.text.getWidth(biome2) - 2, scaleHeight, Color.white, stack, biome2, Color.gray, false);
+                scaleHeight += height;
+            }
+            if (ZiiMHud.config().xp) {
+                float percent = this.player.experienceProgress * 100;
+                String xp = "XP: ";
+                String xp2 = String.format("%.0f%%", percent);
+                if (!this.player.isCreative()) {
+                    drawWithShadowconcat(stack, xp, scaleWidth - this.text.getWidth(xp2) - 2, scaleHeight, Color.white, stack, xp2, Color.gray, false);
+                    scaleHeight += height;
+                }
+            }
+
+            if (this.client.player != null && ZiiMHud.config().effects) {
+                Map<StatusEffect, StatusEffectInstance> effects = this.client.player.getActiveStatusEffects();
+                for (Map.Entry<StatusEffect, StatusEffectInstance> effect : effects.entrySet()) {
+                    String effectName = I18n.translate(effect.getKey().getTranslationKey());
+                    String effectLvl = "";
+                    if (effect.getValue().getAmplifier() >= 1 && effect.getValue().getAmplifier() <= 9) {
+                        effectLvl = I18n.translate("enchantment.level." + (effect.getValue().getAmplifier() + 1));
+                    }
+                    String effectDuration = secondsToString(effect.getValue().getDuration() / 20);
+
+                    int color = effect.getKey().getColor();
+
+                    String effectString = effectDuration;
+                    String effectString2 = String.format(" %s %s", effectName, effectLvl);
+
+                    drawWithShadowconcat(stack, effectString, scaleWidth - this.text.getWidth(effectString2) - 2, scaleHeight, color, stack, effectString2, Color.gray, false);
+                    scaleHeight += height;
+                }
             }
         }
     }
 
     private void drawLeftStats() {
         MatrixStack stack = new MatrixStack();
-
-        height = this.text.fontHeight + 2;
-        int scaleHeight = this.client.getWindow().getScaledHeight();
-        int scaleWidth = 2;
-        String ip = "IP: Local";
-        if (this.player.) {
-            ip = this.player.getServer().getServerIp();
-        }
-
-        String fps = "FPS: " + this.client.fpsDebugString.substring(0, this.client.fpsDebugString.indexOf(" "));
-
-        if(ZiiMHud.config().ip) {
-            this.text.drawWithShadow(stack, ip, scaleWidth, scaleHeight - height, 0xFFFFFF);
-            scaleHeight -= height;
-        }
-        if(ZiiMHud.config().fps) {
-            this.text.drawWithShadow(stack, fps, scaleWidth, scaleHeight - height, 0xFFFFFF);
-            scaleHeight -= height;
-        }
-        if(ZiiMHud.config().ping) {
-            if (this.player.getEntityWorld() instanceof ServerWorld) {
-                String ping = "Ping: " + MinecraftClient.getInstance().getNetworkHandler().getPlayerListEntry(MinecraftClient.getInstance().player.getUuid()).getLatency();
-                this.text.drawWithShadow(stack, ping, scaleWidth, scaleHeight - height, 0xFFFFFF);
-                scaleHeight -= height;
+        if (ZiiMHud.config().menuPositionLeft == ZiiMHudConfig.MenuPositionOptions.BOTTOM) {
+            height = this.text.fontHeight + 2;
+            int scaledHeight = this.client.getWindow().getScaledHeight();
+            int scaleWidth = 2;
+            if (ZiiMHud.config().ping) {
+                if (this.client.getCurrentServerEntry() != null) {
+                    PlayerListEntry entry = this.client.getNetworkHandler().getPlayerListEntry(this.player.getUuid());
+                    if(entry != null) {
+                        String ping = "Ping: ";
+                        String ping2 = String.valueOf(entry.getLatency());
+                        drawWithShadowconcat(stack, ping, scaleWidth, scaledHeight - height, Color.white, stack, ping2, Color.gray, true);
+                        scaledHeight -= height;
+                    }
+                }
             }
+            if (ZiiMHud.config().ip) {
+                if (this.client.getCurrentServerEntry() != null) {
+                    this.player.getEntityWorld().getServer();
+                    String ip = "IP: ";
+                    String ip2 = this.client.getCurrentServerEntry().address;
+                    drawWithShadowconcat(stack, ip, scaleWidth, scaledHeight - height, Color.white, stack, ip2, Color.gray, true);
+                    scaledHeight -= height;
+                }
+            }
+            if (ZiiMHud.config().fps) {
+                
+                String fps = "FPS: ";
+                String fps2 = this.client.fpsDebugString.substring(0, this.client.fpsDebugString.indexOf(" "));
+                drawWithShadowconcat(stack, fps, scaleWidth, scaledHeight - height, Color.white, stack, fps2, Color.gray, true);
+                scaledHeight -= height;
+            }
+            if (ZiiMHud.config().time) {
+                SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
+                Date date = new Date();
+                String time = "Time: ";
+                String time2 = formatter.format(date);
+                drawWithShadowconcat(stack, time, scaleWidth, scaledHeight - height, Color.white, stack, time2, Color.gray, true);
+                scaledHeight -= height;
+            }
+        } else if (ZiiMHud.config().menuPositionLeft == ZiiMHudConfig.MenuPositionOptions.TOP) {
+            height = this.text.fontHeight + 2;
+            int scaledHeight = 2;
+            int scaleWidth = 2;
+            if (ZiiMHud.config().fps) {
+                String fps = "FPS: ";
+                String fps2 = this.client.fpsDebugString.substring(0, this.client.fpsDebugString.indexOf(" "));
+                drawWithShadowconcat(stack, fps, scaleWidth, scaledHeight, Color.white, stack, fps2, Color.gray, true);
+                scaledHeight += height;
+            }
+            if (ZiiMHud.config().ip) {
+                if (this.client.getCurrentServerEntry() != null) {
+                    String ip = "IP: ";
+                    String ip2 = this.client.getCurrentServerEntry().address;
+                    drawWithShadowconcat(stack, ip, scaleWidth, scaledHeight, Color.white, stack, ip2, Color.gray, true);
+                    scaledHeight += height;
+                }
+            }
+            if (ZiiMHud.config().ping) {
+                if (this.client.getCurrentServerEntry() != null) {
+                    PlayerListEntry entry = this.client.getNetworkHandler().getPlayerListEntry(this.player.getUuid());
+                    if (entry != null) {
+                        String ping = "Ping: ";
+                        String ping2 = String.valueOf(entry.getLatency());
+                        drawWithShadowconcat(stack, ping, scaleWidth, scaledHeight, Color.white, stack, ping2, Color.gray, true);
+                        scaledHeight += height;
+                    }
+                }
+            }
+            if (ZiiMHud.config().time) {
+                SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
+                Date date = new Date();
+                String time = "Time: ";
+                String time2 = formatter.format(date);
+                drawWithShadowconcat(stack, time, scaleWidth, scaledHeight, Color.white, stack, time2, Color.gray, true);
+                scaledHeight += height;
+            }
+        }
+    }
+
+    private void drawWithShadowconcat(MatrixStack matrix1, String text1, float x, float y, int color1, MatrixStack matrix2, String text2, int color2, boolean left) {
+        if (left) {
+            this.text.drawWithShadow(matrix1, text1, x, y, color1);
+            this.text.drawWithShadow(matrix2, text2, x + this.text.getWidth(text1), y, color2);
+        } else {
+            this.text.drawWithShadow(matrix1, text1, x - this.text.getWidth(text1), y, color1);
+            this.text.drawWithShadow(matrix2, text2, x, y, color2);
         }
     }
 
@@ -153,6 +282,10 @@ public class DrawUI implements Drawable {
             i++;
             int x = itemWidth + i * 8 - 9;
             int height = this.client.getWindow().getScaledHeight() - 55;
+            if (this.player.isCreative()) {
+                height = this.client.getWindow().getScaledHeight() - 40;
+            }
+
             this.client.getItemRenderer().renderInGuiWithOverrides(this.player, equippedItem, x, height);
             this.client.getItemRenderer().renderGuiItemOverlay(this.text, equippedItem, x, height);
 
@@ -206,7 +339,7 @@ public class DrawUI implements Drawable {
                 dir = "Invalid";
         }
 
-        return String.format("%s %s §7(%.1f, %.1f)", facing.name(), dir, MathHelper.wrapDegrees(yaw), MathHelper.wrapDegrees(pitch));
+        return String.format("%s %s ", facing.name(), dir);
     }
 
     private String getNetherCoords() {

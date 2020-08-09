@@ -12,9 +12,20 @@ public class ZiiMHudConfig {
     public boolean armor = true;
     public boolean xp = true;
 
-    //Network/Client
+    //Network
     public boolean ip = true;
     public boolean ping = true;
+
+    //Client
     public boolean fps = true;
+    public boolean time = true;
+
+    public MenuPositionOptions menuPositionLeft = MenuPositionOptions.TOP;
+    public MenuPositionOptions menuPositionRight = MenuPositionOptions.BOTTOM;
+
+    public enum MenuPositionOptions {
+        TOP,
+        BOTTOM
+    }
 
 }

@@ -4,6 +4,7 @@ import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,38 +19,76 @@ public final class ZiiMHudConfigController {
     private static final Logger log = LogManager.getLogger();
 
     private static final File configFile;
+    private static final ZiiMHudConfig defaults = new ZiiMHudConfig();
+
+    static {
+        configFile = new File(FabricLoader.getInstance().getConfigDir().toFile(), "ziimhud.properties");
+        try {
+            if (configFile.createNewFile()) {
+                persist(new ZiiMHudConfig());
+            }
+        } catch (IOException e) {
+            log.warn("Could not create configuration file");
+        }
+    }
 
     public ZiiMHudConfigController() {
     }
-
-    private static final ZiiMHudConfig defaults = new ZiiMHudConfig();
 
     public static Screen getConfigScreen(ZiiMHudConfig config, Screen parent) {
         ConfigBuilder builder = ConfigBuilder.create()
                 .setParentScreen(parent)
                 .setTitle(new TranslatableText("ziimhud.config.title"))
                 .setSavingRunnable(() -> persist(config));
+        builder.getOrCreateCategory(new TranslatableText("ziimhud.config.category.general"))
+                .addEntry(ConfigEntryBuilder.create()
+                        .startSelector(new TranslatableText("ziimhud.config.option.menuPositionLeft"), ZiiMHudConfig.MenuPositionOptions.values(), config.menuPositionLeft)
+                        .setDefaultValue(ZiiMHudConfig.MenuPositionOptions.TOP)
+                        .setNameProvider(value -> {
+                            if(value.equals(ZiiMHudConfig.MenuPositionOptions.BOTTOM)) {
+                                return new TranslatableText("ziimhud.config.option.menuSpot.bottom");
+                            } else if(value.equals(ZiiMHudConfig.MenuPositionOptions.TOP)) {
+                                return new TranslatableText("ziimhud.config.option.menuSpot.top");
+                            }
+                            return new LiteralText("Error");
+                        })
+                        .setSaveConsumer(value -> config.menuPositionLeft = value)
+                        .build())
+                .addEntry(ConfigEntryBuilder.create()
+                        .startSelector(new TranslatableText("ziimhud.config.option.menuPositionRight"), ZiiMHudConfig.MenuPositionOptions.values(), config.menuPositionRight)
+                        .setDefaultValue(ZiiMHudConfig.MenuPositionOptions.BOTTOM)
+                        .setNameProvider(value -> {
+                            if(value.equals(ZiiMHudConfig.MenuPositionOptions.BOTTOM)) {
+                                return new TranslatableText("ziimhud.config.option.menuSpot.bottom");
+                            } else if(value.equals(ZiiMHudConfig.MenuPositionOptions.TOP)) {
+                                return new TranslatableText("ziimhud.config.option.menuSpot.top");
+                            }
+                            return new LiteralText("Error");
+                        })
+                        .setSaveConsumer(value -> config.menuPositionRight = value)
+                        .build());
         builder.getOrCreateCategory(new TranslatableText("ziimhud.config.category.world"))
+
                 .addEntry(ConfigEntryBuilder.create()
-                    .startBooleanToggle(new TranslatableText("ziimhud.config.option.showBiome"), config.biome)
-                    .setDefaultValue(defaults.biome)
-                    .setSaveConsumer(value -> config.biome = value)
-                    .build())
+                        .startBooleanToggle(new TranslatableText("ziimhud.config.option.showBiome"), config.biome)
+                        .setDefaultValue(defaults.biome)
+                        .setSaveConsumer(value -> config.biome = value)
+                        .build())
                 .addEntry(ConfigEntryBuilder.create()
-                    .startBooleanToggle(new TranslatableText("ziimhud.config.option.showPos"), config.pos)
-                    .setDefaultValue(defaults.pos)
-                    .setSaveConsumer(value -> config.pos = value)
-                    .build())
+                        .startBooleanToggle(new TranslatableText("ziimhud.config.option.showPos"), config.pos)
+                        .setDefaultValue(defaults.pos)
+                        .setSaveConsumer(value -> config.pos = value)
+                        .build())
                 .addEntry(ConfigEntryBuilder.create()
-                    .startBooleanToggle(new TranslatableText("ziimhud.config.option.showNetherPos"), config.netherPos)
-                    .setDefaultValue(defaults.netherPos)
-                    .setSaveConsumer(value -> config.netherPos = value)
-                    .build())
+                        .startBooleanToggle(new TranslatableText("ziimhud.config.option.showNetherPos"), config.netherPos)
+                        .setDefaultValue(defaults.netherPos)
+                        .setSaveConsumer(value -> config.netherPos = value)
+                        .build())
                 .addEntry(ConfigEntryBuilder.create()
-                    .startBooleanToggle(new TranslatableText("ziimhud.config.option.showDirection"), config.direction)
-                    .setDefaultValue(defaults.direction)
-                    .setSaveConsumer(value -> config.direction = value)
-                    .build());
+                        .startBooleanToggle(new TranslatableText("ziimhud.config.option.showDirection"), config.direction)
+                        .setDefaultValue(defaults.direction)
+                        .setSaveConsumer(value -> config.direction = value)
+                        .build());
         builder.getOrCreateCategory(new TranslatableText("ziimhud.config.category.player"))
                 .addEntry(ConfigEntryBuilder.create()
                         .startBooleanToggle(new TranslatableText("ziimhud.config.option.showEffects"), config.effects)
@@ -76,9 +115,15 @@ public final class ZiiMHudConfigController {
                         .startBooleanToggle(new TranslatableText("ziimhud.config.option.showPing"), config.ping)
                         .setDefaultValue(defaults.ping)
                         .setSaveConsumer(value -> config.ping = value)
+                        .build());
+        builder.getOrCreateCategory(new TranslatableText("ziimhud.config.category.client"))
+                .addEntry(ConfigEntryBuilder.create()
+                        .startBooleanToggle(new TranslatableText("ziimhud.config.option.showTime"), config.time)
+                        .setDefaultValue(defaults.time)
+                        .setSaveConsumer(value -> config.time = value)
                         .build())
                 .addEntry(ConfigEntryBuilder.create()
-                        .startBooleanToggle(new TranslatableText("ziimhud.config.option.ShowFPS"), config.fps)
+                        .startBooleanToggle(new TranslatableText("ziimhud.config.option.showFPS"), config.fps)
                         .setDefaultValue(defaults.fps)
                         .setSaveConsumer(value -> config.fps = value)
                         .build());
@@ -96,14 +141,21 @@ public final class ZiiMHudConfigController {
             config.direction = Boolean.parseBoolean(props.getProperty("world.direction"));
 
             //Player
+            config.xp = Boolean.parseBoolean(props.getProperty("player.xp"));
             config.effects = Boolean.parseBoolean(props.getProperty("player.effects"));
             config.armor = Boolean.parseBoolean(props.getProperty("player.armor"));
 
             //Network
             config.ip = Boolean.parseBoolean(props.getProperty("network.ip"));
             config.ping = Boolean.parseBoolean(props.getProperty("network.ping"));
-            config.fps = Boolean.parseBoolean(props.getProperty("network.fps"));
-        } catch(IOException e) {
+
+            //Client
+            config.fps = Boolean.parseBoolean(props.getProperty("client.fps"));
+            config.time = Boolean.parseBoolean(props.getProperty("client.time"));
+
+            config.menuPositionLeft = ZiiMHudConfig.MenuPositionOptions.valueOf(props.getProperty("general.leftposition", "TOP"));
+            config.menuPositionRight = ZiiMHudConfig.MenuPositionOptions.valueOf(props.getProperty("general.rightposition", "BOTTOM"));
+        } catch (IOException e) {
             log.warn("Could not load configuration settings");
         }
     }
@@ -117,29 +169,25 @@ public final class ZiiMHudConfigController {
         props.setProperty("world.direction", String.valueOf(config.direction));
 
         //Player
+        props.setProperty("player.xp", String.valueOf(config.xp));
         props.setProperty("player.effects", String.valueOf(config.effects));
         props.setProperty("player.armor", String.valueOf(config.armor));
 
-        //Network/client
+        //Network
         props.setProperty("network.ip", String.valueOf(config.ip));
         props.setProperty("network.ping", String.valueOf(config.ping));
-        props.setProperty("network.fps", String.valueOf(config.fps));
+
+        //Client
+        props.setProperty("client.fps", String.valueOf(config.fps));
+        props.setProperty("client.time", String.valueOf(config.time));
+
+        props.setProperty("general.leftposition", String.valueOf(config.menuPositionLeft));
+        props.setProperty("general.rightposition", String.valueOf(config.menuPositionRight));
         try {
             configFile.createNewFile();
             props.store(new FileOutputStream(configFile), "ZiiM Hud Config");
-        } catch(IOException e) {
+        } catch (IOException e) {
             log.warn("Could not save configuration settings");
-        }
-    }
-
-    static {
-        configFile = new File(FabricLoader.getInstance().getConfigDir().toFile(), "ziimhud.properties");
-        try {
-            if(configFile.createNewFile()) {
-                persist(new ZiiMHudConfig());
-            }
-        } catch(IOException e) {
-            log.warn("Could not create configuration file");
         }
     }
 
