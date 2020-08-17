@@ -82,7 +82,8 @@ public class DrawUI implements Drawable {
             }
             if (ZiiMHud.config().biome) {
                 String biome = "Biome: ";
-                String biome2 = this.player.getEntityWorld().getBiome(this.player.getBlockPos()).getName().getString();
+                String biome2 = this.player.getEntityWorld().getBiome(this.player.getBlockPos()).getCategory().getName();
+                biome2 = biome2.substring(0, 1).toUpperCase() + biome2.substring(1);
                 drawWithShadowconcat(stack, biome, scaleWidth - this.text.getWidth(biome2) - 2, scaleHeight - height, Color.white, stack, biome2, Color.gray, false);
                 scaleHeight -= height;
             }
@@ -138,7 +139,8 @@ public class DrawUI implements Drawable {
             }
             if (ZiiMHud.config().biome) {
                 String biome = "Biome: ";
-                String biome2 = this.player.getEntityWorld().getBiome(this.player.getBlockPos()).getName().getString();
+                String biome2 = this.player.getEntityWorld().getBiome(this.player.getBlockPos()).getCategory().getName();
+                biome2 = biome2.substring(0, 1).toUpperCase() + biome2.substring(1);
                 drawWithShadowconcat(stack, biome, scaleWidth - this.text.getWidth(biome2) - 2, scaleHeight, Color.white, stack, biome2, Color.gray, false);
                 scaleHeight += height;
             }
