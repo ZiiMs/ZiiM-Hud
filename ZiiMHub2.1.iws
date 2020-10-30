@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8c039d6f-7e12-472a-a003-e0ba2b45e30f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="C:\Users\Fan Zyko\IdeaProjects\ZiiMHub2.1">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ZiiMHub2.1" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ZiiMHub2.1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ZiiMHub2.1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="fabric" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\Fan Zyko\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.7660.26\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1jNmieQZ3kB9hxQow7HSjyTE2MN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ZiiM Hud" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Fan Zyko\IdeaProjects\ZiiMHub2.1\src\main\resources\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fan Zyko\IdeaProjects\ZiiMHub2.1\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main" />
+      <module name="ZiiMHub2.1.main" />
+      <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\Fan@@0020Zyko\IdeaProjects\ZiiMHud2\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotClient" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ziimhud build" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" value="ziimhud build" />
+        <option name="externalProjectPath" value="C:\Users\Fan Zyko\IdeaProjects\ZiiMHub2.1" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.ziimhud build" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c039d6f-7e12-472a-a003-e0ba2b45e30f" name="Default Changelist" comment="" />
+      <created>1603653052932</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603653052932</updated>
+      <workItem from="1603653054159" duration="5510000" />
+      <workItem from="1603662530899" duration="2032000" />
+      <workItem from="1603672620542" duration="4993000" />
+      <workItem from="1603733692922" duration="8000" />
+      <workItem from="1603733718987" duration="2000" />
+      <workItem from="1603733936614" duration="3000" />
+      <workItem from="1603733958649" duration="16000" />
+      <workItem from="1603733993095" duration="9000" />
+      <workItem from="1603734020449" duration="62000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="164" key="#Plugins" timestamp="1604102255263">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="164" key="#Plugins/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604102255263" />
+    <state x="414" y="178" width="1092" height="789" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603653359687">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="178" width="1092" height="789" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1603653359687" />
+    <state x="765" y="227" key="#com.intellij.ide.util.MemberChooser" timestamp="1604023746432">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="765" y="227" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604023746432" />
+    <state x="515" y="157" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604016562134">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="515" y="157" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604016562134" />
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604097506260">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604097506260" />
+    <state x="690" y="353" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1603850773062">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="353" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1603850773062" />
+    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1603673468916">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1603673468916" />
+    <state width="1877" height="249" key="GridCell.Tab.0.bottom" timestamp="1604101526813">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604101526813" />
+    <state width="1877" height="249" key="GridCell.Tab.0.center" timestamp="1604101526812">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="249" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604101526812" />
+    <state width="1877" height="249" key="GridCell.Tab.0.left" timestamp="1604101526812">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="249" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604101526812" />
+    <state width="1877" height="249" key="GridCell.Tab.0.right" timestamp="1604101526813">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="249" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604101526813" />
+    <state width="0" height="0" key="GridCell.Tab.1.bottom" timestamp="1604101526772">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604101526772" />
+    <state width="0" height="0" key="GridCell.Tab.1.center" timestamp="1604101526772">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604101526772" />
+    <state width="0" height="0" key="GridCell.Tab.1.left" timestamp="1604101526772">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604101526772" />
+    <state width="0" height="0" key="GridCell.Tab.1.right" timestamp="1604101526772">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604101526772" />
+    <state x="461" y="155" key="SettingsEditor" timestamp="1603848315748">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="155" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1603848315748" />
+    <state x="668" y="242" width="583" height="628" key="find.popup" timestamp="1604101493213">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="668" y="242" width="583" height="628" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604101493213" />
+    <state x="746" y="263" key="refactoring.ChangeSignatureDialog" timestamp="1604024089086">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="746" y="263" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604024089086" />
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1603988272494">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1603988272494" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1604102240092">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604102240092" />
+    <state x="682" y="430" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1604102184500">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="682" y="430" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604102184500" />
+  </component>
+</project>

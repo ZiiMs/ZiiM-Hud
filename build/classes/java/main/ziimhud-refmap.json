@@ -1,0 +1,34 @@
+{
+  "mappings": {
+    "me/ziim/ziimhud/mixins/KeyboardMixin": {
+      "onKey": "Lnet/minecraft/class_309;method_1466(JIIII)V"
+    },
+    "me/ziim/ziimhud/mixins/InGameHudMixin": {
+      "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_4587;F)V"
+    },
+    "me/ziim/ziimhud/mixins/ClientPlayNetworkHandlerMixin": {
+      "onDisconnect": "Lnet/minecraft/class_634;method_11083(Lnet/minecraft/class_2661;)V",
+      "onGameJoin": "Lnet/minecraft/class_634;method_11120(Lnet/minecraft/class_2678;)V"
+    },
+    "me/ziim/ziimhud/mixins/ClientConnectionMixin": {
+      "handlePacket": "Lnet/minecraft/class_2535;method_10759(Lnet/minecraft/class_2596;Lnet/minecraft/class_2547;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "me/ziim/ziimhud/mixins/KeyboardMixin": {
+        "onKey": "Lnet/minecraft/class_309;method_1466(JIIII)V"
+      },
+      "me/ziim/ziimhud/mixins/InGameHudMixin": {
+        "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_4587;F)V"
+      },
+      "me/ziim/ziimhud/mixins/ClientPlayNetworkHandlerMixin": {
+        "onDisconnect": "Lnet/minecraft/class_634;method_11083(Lnet/minecraft/class_2661;)V",
+        "onGameJoin": "Lnet/minecraft/class_634;method_11120(Lnet/minecraft/class_2678;)V"
+      },
+      "me/ziim/ziimhud/mixins/ClientConnectionMixin": {
+        "handlePacket": "Lnet/minecraft/class_2535;method_10759(Lnet/minecraft/class_2596;Lnet/minecraft/class_2547;)V"
+      }
+    }
+  }
+}
