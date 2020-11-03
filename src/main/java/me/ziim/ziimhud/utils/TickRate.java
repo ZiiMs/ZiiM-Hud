@@ -26,7 +26,7 @@ public class TickRate {
 
             if (timeLastTimeUpdate != -1L) {
                 float timeElapsed = (float) (System.currentTimeMillis() - timeLastTimeUpdate) / 1000.0F;
-                tickRates[(nextIndex % tickRates.length)] = Math.clamp(20.0f / timeElapsed, 0.0f, 20.0f);
+                tickRates[(nextIndex % tickRates.length)] = Utils.clamp(20.0f / timeElapsed, 0.0f, 20.0f);
 
                 nextIndex += 1;
             }
@@ -54,6 +54,6 @@ public class TickRate {
                 numTicks += 1.0f;
             }
         }
-        return Math.clamp(sumTickRates / numTicks, 0.0f, 20.0f);
+        return Utils.clamp(sumTickRates / numTicks, 0.0f, 20.0f);
     }
 }

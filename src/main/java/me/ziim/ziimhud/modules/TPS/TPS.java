@@ -1,22 +1,32 @@
 package me.ziim.ziimhud.modules.TPS;
 
-import com.google.common.eventbus.Subscribe;
-import me.ziim.ziimhud.events.Render2DEvent;
-import me.ziim.ziimhud.gui.ModuleButton;
-import me.ziim.ziimhud.utils.Color;
+import me.ziim.ziimhud.gui.AbstractHudWidget;
+import me.ziim.ziimhud.utils.ColorHelper;
 import me.ziim.ziimhud.utils.TickRate;
-import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
 
-public class TPS extends ModuleButton {
+import java.awt.*;
 
-    public TPS(int x, int y) {
-        super("TPS", "Shows the TPS of the world", "TPS: ", x, y, new Color(19, 170, 235, 255), true);
+public class TPS extends AbstractHudWidget {
+    public static final Identifier ID = new Identifier("ziimhud", "tps");
+
+    public TPS() {
+        super();
+        setColor(new ColorHelper(Color.BLUE));
     }
 
-    @Subscribe
-    public void Render2DEvent(Render2DEvent e) {
-//        System.out.println("TickRate: " + TickRate.INSTANCE.getTickRate());
-        super.renderText(new MatrixStack(), getText() + TickRate.INSTANCE.getTickRate());
+    @Override
+    public String getData() {
+        return String.format("TickRate: %.1f", TickRate.INSTANCE.getTickRate());
+    }
 
+    @Override
+    public String getText() {
+        return "TickRate";
+    }
+
+    @Override
+    public Identifier getID() {
+        return ID;
     }
 }

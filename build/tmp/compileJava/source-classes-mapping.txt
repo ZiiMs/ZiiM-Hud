@@ -1,33 +1,37 @@
 me/ziim/ziimhud/events/Render2DEvent.java
  me.ziim.ziimhud.events.Render2DEvent
+me/ziim/ziimhud/gui/AbstractWidget.java
+ me.ziim.ziimhud.gui.AbstractWidget
 me/ziim/ziimhud/modules/openConfig.java
  me.ziim.ziimhud.modules.openConfig
-me/ziim/ziimhud/gui/ModuleButton.java
- me.ziim.ziimhud.gui.ModuleButton
 me/ziim/ziimhud/mixins/KeyboardMixin.java
  me.ziim.ziimhud.mixins.KeyboardMixin
 me/ziim/ziimhud/modules/Ping/Ping.java
  me.ziim.ziimhud.modules.Ping.Ping
 me/ziim/ziimhud/mixins/ClientPlayNetworkHandlerMixin.java
  me.ziim.ziimhud.mixins.ClientPlayNetworkHandlerMixin
-me/ziim/ziimhud/utils/Color.java
- me.ziim.ziimhud.utils.Color
+me/ziim/ziimhud/gui/Vector2D.java
+ me.ziim.ziimhud.gui.Vector2D
 me/ziim/ziimhud/events/OnJoinEvent.java
  me.ziim.ziimhud.events.OnJoinEvent
 me/ziim/ziimhud/events/OnKeyPressEvent.java
  me.ziim.ziimhud.events.OnKeyPressEvent
-me/ziim/ziimhud/modules/ModuleManager.java
- me.ziim.ziimhud.modules.ModuleManager
+me/ziim/ziimhud/utils/Utils.java
+ me.ziim.ziimhud.utils.Utils
+me/ziim/ziimhud/gui/AbstractHudWidget.java
+ me.ziim.ziimhud.gui.AbstractHudWidget
 me/ziim/ziimhud/modules/TPS/TPS.java
  me.ziim.ziimhud.modules.TPS.TPS
 me/ziim/ziimhud/utils/TickRate.java
  me.ziim.ziimhud.utils.TickRate
 me/ziim/ziimhud/events/packets/ReceivePacket.java
  me.ziim.ziimhud.events.packets.ReceivePacket
+me/ziim/ziimhud/gui/WidgetManager.java
+ me.ziim.ziimhud.gui.WidgetManager
 me/ziim/ziimhud/events/OnDisconnect.java
  me.ziim.ziimhud.events.OnDisconnect
-me/ziim/ziimhud/gui/ConfigGui.java
- me.ziim.ziimhud.gui.ConfigGui
+me/ziim/ziimhud/events/RenderCallback.java
+ me.ziim.ziimhud.events.RenderCallback
 me/ziim/ziimhud/events/Event.java
  me.ziim.ziimhud.events.Event
 me/ziim/ziimhud/gui/ConfigScreen.java
@@ -38,7 +42,7 @@ me/ziim/ziimhud/mixins/InGameHudMixin.java
  me.ziim.ziimhud.mixins.InGameHudMixin
 me/ziim/ziimhud/events/EventManager.java
  me.ziim.ziimhud.events.EventManager
-me/ziim/ziimhud/utils/Math.java
- me.ziim.ziimhud.utils.Math
+me/ziim/ziimhud/utils/ColorHelper.java
+ me.ziim.ziimhud.utils.ColorHelper
 me/ziim/ziimhud/Ziimhud.java
  me.ziim.ziimhud.Ziimhud
