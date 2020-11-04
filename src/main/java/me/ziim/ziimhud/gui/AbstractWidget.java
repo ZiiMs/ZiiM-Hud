@@ -14,12 +14,16 @@ public abstract class AbstractWidget {
     public float x = 0;
     public float y = 0;
     public float scale = 1;
-    protected boolean hovered = false;
-    protected MinecraftClient client = MinecraftClient.getInstance();
     public boolean enabled = true;
     public ColorHelper color = new ColorHelper(Color.white);
+    protected boolean hovered = false;
+    protected MinecraftClient client = MinecraftClient.getInstance();
 
-    public AbstractWidget(int width, int height) {
+    public AbstractWidget() {
+        this(47, 13);
+    }
+
+    protected AbstractWidget(int width, int height) {
         this.width = width;
         this.height = height;
     }
@@ -32,23 +36,6 @@ public abstract class AbstractWidget {
         return MathHelper.clamp((float) (current) / (max - offset), 0, 1);
     }
 
-    public boolean isHovered() {
-        return hovered;
-    }
-
-    public void setHovered(boolean hovered) {
-        this.hovered = hovered;
-    }
-
-    public abstract Identifier getID();
-
-    public void renderButton(MatrixStack matrices) {
-        if (client == null) {
-            client = MinecraftClient.getInstance();
-        }
-        renderWidget(matrices);
-    }
-
     public ColorHelper getColor() {
         return color;
     }
@@ -57,7 +44,15 @@ public abstract class AbstractWidget {
         this.color = color;
     }
 
+    public abstract Identifier getID();
+
     protected abstract void renderWidget(MatrixStack matrices);
+
+    public abstract void render(MatrixStack matrices);
+
+    public abstract String getData();
+
+    public abstract String getText();
 
     public void renderHud(MatrixStack matrices) {
         if (client == null) {
@@ -66,7 +61,12 @@ public abstract class AbstractWidget {
         render(matrices);
     }
 
-    public abstract void render(MatrixStack matrices);
+    public void renderMoveScreen(MatrixStack matrices) {
+        if (client == null) {
+            client = MinecraftClient.getInstance();
+        }
+        renderWidget(matrices);
+    }
 
     public void setXY(int x, int y) {
         setX(x);
@@ -110,6 +110,21 @@ public abstract class AbstractWidget {
     }
 
     public void setEnabled(boolean enabled) {
+        if (enabled) {
+            this.color.a = 255;
+        } else {
+            this.color.a = 50;
+        }
         this.enabled = enabled;
     }
+
+    public float getScale() {
+        return scale;
+    }
+
+    public void setScale(float scale) {
+        this.scale = scale;
+    }
+
+
 }

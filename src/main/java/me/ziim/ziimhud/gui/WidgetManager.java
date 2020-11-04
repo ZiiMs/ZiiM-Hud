@@ -1,5 +1,7 @@
 package me.ziim.ziimhud.gui;
 
+import com.google.common.eventbus.Subscribe;
+import me.ziim.ziimhud.events.Render2DEvent;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
@@ -35,11 +37,12 @@ public class WidgetManager {
         return entries.get(identifier);
     }
 
-    public void render(MatrixStack stack) {
+    @Subscribe
+    public void render(Render2DEvent e) {
         if (!mc.options.debugEnabled) {
             for (AbstractWidget widget : getEntries()) {
                 if (widget.isEnabled()) {
-                    widget.renderHud(stack);
+                    widget.renderHud(e.matrix);
                 }
             }
         }

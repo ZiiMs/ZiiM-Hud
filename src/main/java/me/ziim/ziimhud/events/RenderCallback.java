@@ -5,8 +5,8 @@ import me.ziim.ziimhud.gui.WidgetManager;
 
 public class RenderCallback {
 
-    @Subscribe
-    public void Render2DEvent(Render2DEvent e) {
-        WidgetManager.INSTANCE.render(e.matrix);
-    }
+//    @Subscribe
+//    public void Render2DEvent(Render2DEvent e) {
+//        WidgetManager.INSTANCE.render(e.matrix);
+//    }
 }

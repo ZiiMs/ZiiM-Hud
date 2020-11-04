@@ -30,12 +30,9 @@ public class ConfigScreen extends Screen {
         renderBackground(matrices);
 
         Optional<AbstractWidget> foundWidget = WidgetManager.INSTANCE.getWidgetXY(mouseX, mouseY);
-        foundWidget.ifPresent(abstractWidget -> abstractWidget.setHovered(true));
+        foundWidget.ifPresent(abstractWidget -> abstractWidget.hovered = true);
         WidgetManager.INSTANCE.getEntries().forEach(abstractWidget -> {
-            if (!abstractWidget.isEnabled()) {
-                abstractWidget.color.a = 75;
-            }
-            abstractWidget.renderButton(matrices);
+            abstractWidget.renderMoveScreen(matrices);
         });
         super.render(matrices, mouseX, mouseY, delta);
     }

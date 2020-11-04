@@ -18,8 +18,6 @@ me/ziim/ziimhud/events/OnKeyPressEvent.java
  me.ziim.ziimhud.events.OnKeyPressEvent
 me/ziim/ziimhud/utils/Utils.java
  me.ziim.ziimhud.utils.Utils
-me/ziim/ziimhud/gui/AbstractHudWidget.java
- me.ziim.ziimhud.gui.AbstractHudWidget
 me/ziim/ziimhud/modules/TPS/TPS.java
  me.ziim.ziimhud.modules.TPS.TPS
 me/ziim/ziimhud/utils/TickRate.java
