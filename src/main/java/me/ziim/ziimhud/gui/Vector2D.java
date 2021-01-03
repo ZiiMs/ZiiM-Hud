@@ -2,8 +2,8 @@ package me.ziim.ziimhud.gui;
 
 
 public class Vector2D {
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     public Vector2D(int scaledX, int scaledY) {
         this.x = scaledX;

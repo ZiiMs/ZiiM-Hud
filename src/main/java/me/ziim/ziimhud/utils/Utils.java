@@ -5,6 +5,7 @@ import java.util.Random;
 public class Utils {
     private static final Random random = new Random();
 
+
     public static double normalize(double val, double max, double min) {
         return (val - min) / (max - min);
     }
@@ -34,4 +35,6 @@ public class Utils {
     public static double random(double min, double max) {
         return min + (max - min) * random.nextDouble();
     }
+
+
 }

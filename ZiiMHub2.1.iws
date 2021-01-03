@@ -97,21 +97,28 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/me/ziim/ziimhud/modules" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ZiiM Hud" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Fan Zyko\IdeaProjects\ZiiMHub2.1\src\main\resources\assets" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Fan Zyko\IdeaProjects\ZiiMHub2.1\src\main\resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Fan Zyko\IdeaProjects\ZiiMHub2.1\src\main\resources\assets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="me.ziim.ziimhud.Commands.commands" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.ziimhud build">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main" />
       <module name="ZiiMHub2.1.main" />
@@ -137,7 +144,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <list>
@@ -180,94 +189,7 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="164" key="#Plugins" timestamp="1604102255263">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="164" key="#Plugins/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604102255263" />
-    <state x="50" y="32" width="1857" height="934" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604407415343">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="50" y="32" width="1857" height="934" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604407415343" />
-    <state x="765" y="227" key="#com.intellij.ide.util.MemberChooser" timestamp="1604474197773">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="765" y="227" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604474197773" />
-    <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604421982840">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604421982840" />
-    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604406973306">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604406973306" />
-    <state x="690" y="353" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1603850773062">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="690" y="353" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1603850773062" />
-    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1604214564721">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604214564721" />
-    <state width="1877" height="249" key="GridCell.Tab.0.bottom" timestamp="1604475292303">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604475292303" />
-    <state width="1877" height="249" key="GridCell.Tab.0.center" timestamp="1604475292303">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604475292303" />
-    <state width="1877" height="249" key="GridCell.Tab.0.left" timestamp="1604475292303">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604475292303" />
-    <state width="1877" height="249" key="GridCell.Tab.0.right" timestamp="1604475292303">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604475292303" />
-    <state width="1877" height="249" key="GridCell.Tab.1.bottom" timestamp="1604475292303">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="249" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604475292303" />
-    <state width="1877" height="249" key="GridCell.Tab.1.center" timestamp="1604475292303">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="249" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604475292303" />
-    <state width="1877" height="249" key="GridCell.Tab.1.left" timestamp="1604475292303">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="249" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604475292303" />
-    <state width="1877" height="249" key="GridCell.Tab.1.right" timestamp="1604475292303">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="249" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604475292303" />
-    <state x="461" y="155" key="SettingsEditor" timestamp="1603848315748">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="461" y="155" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1603848315748" />
-    <state x="681" y="266" width="540" height="540" key="StructurePopup" timestamp="1604403308464">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="681" y="266" width="540" height="540" key="StructurePopup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604403308464" />
-    <state x="668" y="242" width="583" height="628" key="find.popup" timestamp="1604475040890">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="668" y="242" width="583" height="628" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604475040890" />
-    <state x="746" y="263" key="refactoring.ChangeSignatureDialog" timestamp="1604024089086">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="746" y="263" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604024089086" />
-    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1604399468985">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604399468985" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1604236632558">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604236632558" />
-    <state x="682" y="430" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1604102184500">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="682" y="430" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1604102184500" />
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ZiiMHub2_1$Main.ic" NAME="Main Coverage Results" MODIFIED="1609567865593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -1,9 +1,9 @@
 package me.ziim.ziimhud.gui;
 
 import com.google.common.eventbus.Subscribe;
+import me.ziim.ziimhud.Ziimhud;
 import me.ziim.ziimhud.events.Render2DEvent;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -39,18 +39,18 @@ public class WidgetManager {
 
     @Subscribe
     public void render(Render2DEvent e) {
-        if (!mc.options.debugEnabled) {
+        if (!mc.options.debugEnabled && !mc.options.hudHidden && mc.currentScreen == null) {
             for (AbstractWidget widget : getEntries()) {
-                if (widget.isEnabled()) {
+//                if (widget.isEnabled()) {
                     widget.renderHud(e.matrix);
-                }
+//                }
             }
         }
     }
 
     public Optional<AbstractWidget> getWidgetXY(int x, int y) {
         for (AbstractWidget widget : getEntries()) {
-            if (widget.getX() <= x && widget.getX() + widget.width * widget.scale >= x && widget.getY() + widget.height * widget.scale >= y) {
+            if (widget.getX() <= x && widget.getX() + widget.width * widget.getStorage().scale >= x && widget.getY() + widget.height * widget.getStorage().scale >= y && widget.getY() <= y) {
                 return Optional.of(widget);
             }
         }

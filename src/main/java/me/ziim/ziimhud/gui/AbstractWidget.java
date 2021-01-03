@@ -1,29 +1,32 @@
 package me.ziim.ziimhud.gui;
 
+import com.google.common.eventbus.Subscribe;
+import me.ziim.ziimhud.Ziimhud;
+import me.ziim.ziimhud.events.ResolutionChangeEvent;
 import me.ziim.ziimhud.utils.ColorHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
-import java.awt.*;
+import java.io.IOException;
 
 public abstract class AbstractWidget {
     public int width;
     public int height;
-    public float x = 0;
-    public float y = 0;
-    public float scale = 1;
-    public boolean enabled = true;
-    public ColorHelper color = new ColorHelper(Color.white);
+
+    public ColorHelper color = new ColorHelper(255, 255, 255, 75);
     protected boolean hovered = false;
-    protected MinecraftClient client = MinecraftClient.getInstance();
+    protected MinecraftClient client = Ziimhud.mc;
 
     public AbstractWidget() {
         this(47, 13);
     }
 
-    protected AbstractWidget(int width, int height) {
+    public AbstractWidget(int width, int height) {
+        super();
         this.width = width;
         this.height = height;
     }
@@ -37,11 +40,15 @@ public abstract class AbstractWidget {
     }
 
     public ColorHelper getColor() {
-        return color;
+        return getStorage().textColor;
     }
 
-    public void setColor(ColorHelper color) {
-        this.color = color;
+    public void setTextColor(ColorHelper color) {
+        getStorage().textColor = color;
+    }
+
+    public void setDataColor(ColorHelper color) {
+        getStorage().dataColor = color;
     }
 
     public abstract Identifier getID();
@@ -50,15 +57,17 @@ public abstract class AbstractWidget {
 
     public abstract void render(MatrixStack matrices);
 
-    public abstract String getData();
+    public abstract LiteralText getData();
 
-    public abstract String getText();
+    public abstract LiteralText getText();
 
     public void renderHud(MatrixStack matrices) {
         if (client == null) {
             client = MinecraftClient.getInstance();
         }
-        render(matrices);
+        if(isEnabled()) {
+            render(matrices);
+        }
     }
 
     public void renderMoveScreen(MatrixStack matrices) {
@@ -66,28 +75,34 @@ public abstract class AbstractWidget {
             client = MinecraftClient.getInstance();
         }
         renderWidget(matrices);
+        render(matrices);
     }
 
     public void setXY(int x, int y) {
         setX(x);
         setY(y);
+        try {
+            Ziimhud.storageHandler.save();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public int getX() {
-        return floatToInt(this.x, client.getWindow().getScaledWidth(), Math.round(width * this.scale));
+        return floatToInt(getStorage().x, client.getWindow().getScaledWidth(), Math.round(width * getStorage().scale));
     }
 
     public void setX(int x) {
-        this.x = intToFloat(x, client.getWindow().getScaledWidth(), Math.round(width * this.scale));
+        getStorage().x = intToFloat(x, client.getWindow().getScaledWidth(), Math.round(width * getStorage().scale));
 
     }
 
     public int getY() {
-        return floatToInt(this.y, client.getWindow().getScaledHeight(), Math.round(height * this.scale));
+        return floatToInt(getStorage().y, client.getWindow().getScaledHeight(), Math.round(height * getStorage().scale));
     }
 
     public void setY(int y) {
-        this.y = intToFloat(y, client.getWindow().getScaledHeight(), Math.round(height * this.scale));
+        getStorage().y = intToFloat(y, client.getWindow().getScaledHeight(), Math.round(height * getStorage().scale));
     }
 
     public void setDimensions(int width, int height) {
@@ -96,7 +111,7 @@ public abstract class AbstractWidget {
     }
 
     public Vector2D getScaledPos() {
-        return getScaledPos(this.scale);
+        return getScaledPos(getStorage().scale);
     }
 
     public Vector2D getScaledPos(float scale) {
@@ -106,25 +121,40 @@ public abstract class AbstractWidget {
     }
 
     public boolean isEnabled() {
-        return enabled;
+        return getStorage().enabled;
     }
 
     public void setEnabled(boolean enabled) {
         if (enabled) {
-            this.color.a = 255;
+            this.color = new ColorHelper(255, 255, 255, 75);
         } else {
-            this.color.a = 50;
+            this.color = new ColorHelper(255, 0, 0, 75);
         }
-        this.enabled = enabled;
+        getStorage().enabled = enabled;
+        try {
+            Ziimhud.storageHandler.save();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public float getScale() {
-        return scale;
+        return getStorage().scale;
     }
 
     public void setScale(float scale) {
-        this.scale = scale;
+        getStorage().scale = scale;
     }
 
+    public abstract <E extends AbstractStorage> E getStorage();
+
+    public static class AbstractStorage {
+        public float x = 0;
+        public float y = 0;
+        public float scale = 1;
+        public boolean enabled = true;
+        public ColorHelper textColor = new ColorHelper(255, 255, 255, 255);
+        public ColorHelper dataColor = new ColorHelper(142, 142, 142, 255);
+    }
 
 }

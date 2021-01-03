@@ -4,12 +4,14 @@
   "package": "me.ziim.ziimhud.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "ClientPlayerEntityMixin"
   ],
   "client": [
     "ClientConnectionMixin",
     "ClientPlayNetworkHandlerMixin",
     "InGameHudMixin",
-    "KeyboardMixin"
+    "KeyboardMixin",
+    "MinecraftClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1

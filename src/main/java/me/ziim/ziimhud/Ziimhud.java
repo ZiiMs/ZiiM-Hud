@@ -1,7 +1,16 @@
 package me.ziim.ziimhud;
 
 import com.google.common.eventbus.EventBus;
+import me.ziim.ziimhud.Commands.CommandManager;
+import me.ziim.ziimhud.config.StorageConfig;
+import me.ziim.ziimhud.config.StorageHandler;
 import me.ziim.ziimhud.gui.WidgetManager;
+import me.ziim.ziimhud.modules.Armour.Armour;
+import me.ziim.ziimhud.modules.Biome.Biome;
+import me.ziim.ziimhud.modules.CoordModules.NetherPos;
+import me.ziim.ziimhud.modules.CoordModules.Pos;
+import me.ziim.ziimhud.modules.Direction.Direction;
+import me.ziim.ziimhud.modules.FPS.FPS;
 import me.ziim.ziimhud.modules.Ping.Ping;
 import me.ziim.ziimhud.modules.TPS.TPS;
 import me.ziim.ziimhud.modules.openConfig;
@@ -13,12 +22,15 @@ import net.minecraft.client.MinecraftClient;
 @Environment(EnvType.CLIENT)
 public class Ziimhud implements ClientModInitializer {
     public static final Ziimhud INSTANCE = new Ziimhud();
+    public static StorageConfig storage;
+    public static StorageHandler storageHandler;
     public static final MinecraftClient mc = MinecraftClient.getInstance();
     public static final EventBus EVENT_BUS = new EventBus();
 
     @Override
     public void onInitializeClient() {
         WidgetManager.INSTANCE = new WidgetManager();
+        CommandManager.init();
         initHud();
 
 
@@ -28,8 +40,15 @@ public class Ziimhud implements ClientModInitializer {
     }
 
     private void initHud() {
+        storageHandler = new StorageHandler();
         WidgetManager.INSTANCE.add(new TPS());
+        WidgetManager.INSTANCE.add(new Armour(47, 13));
         WidgetManager.INSTANCE.add(new Ping());
+        WidgetManager.INSTANCE.add(new Biome());
+        WidgetManager.INSTANCE.add(new Pos());
+        WidgetManager.INSTANCE.add(new NetherPos());
+        WidgetManager.INSTANCE.add(new Direction());
+        WidgetManager.INSTANCE.add(new FPS());
 
         EVENT_BUS.register(WidgetManager.INSTANCE);
     }

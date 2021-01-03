@@ -1,4 +1,4 @@
 package me.ziim.ziimhud.events;
 
-public class OnDisconnect {
+public class OnDisconnect extends Event {
 }

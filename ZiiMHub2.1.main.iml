@@ -21,119 +21,122 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-compress:1.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc:fabric-loader-sat4j:2.3.5.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.ow2.asm:asm-tree:9.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.ow2.asm:asm-analysis:9.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-jemalloc:3.2.2" level="project" />
     <orderEntry type="module-library" scope="PROVIDED">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loom/0.5-SNAPSHOT/ec8d5dd0d5002eccb78e42bbfb7f68f5b8fc602c/fabric-loom-0.5-SNAPSHOT.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loom/0.5-SNAPSHOT/df9379beef12ff4973d97df3777d43639e6b2b03/fabric-loom-0.5-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-opengl:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.3.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jline:jline-reader:3.12.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-all:4.1.25.Final" level="project" />
+    <orderEntry type="library" name="Gradle: net.sf.jopt-simple:jopt-simple:5.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.jinput:jinput:2.0.5" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jline:jline-terminal:3.12.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.jimfs:jimfs:1.2-fabric" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-tinyfd:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-stb:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc:tiny-mappings-parser:0.2.2.14" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:text2speech:1.11.3" level="project" />
+    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.1.3" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc:tiny-remapper:0.3.0.70" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains:annotations:19.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: it.unimi.dsi:fastutil:8.2.1" level="project" />
+    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.errorprone:error_prone_annotations:2.3.4" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:patchy:1.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:failureaccess:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.ibm.icu:icu4j:66.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:guava:30.0-jre" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: net.minecrell:terminalconsoleappender:1.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:datafixerupper:4.0.26" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.dev.jna:platform:3.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-openal:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-glfw:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.ow2.asm:asm-util:9.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:brigadier:1.0.17" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.jutils:jutils:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.ow2.asm:asm:9.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna:4.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.ow2.asm:asm-commons:9.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.checkerframework:checker-qual:3.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: commons-io:commons-io:2.5" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.j2objc:j2objc-annotations:1.3" level="project" />
+    <orderEntry type="library" name="Gradle: oshi-project:oshi-core:1.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:javabridge:1.0.22" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: net.fabricmc:dev-launch-injector:0.2.1+build.8" level="project" />
+    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/fabric-loom/yarn-1.16.3+build.47-v2-final.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/fabric-loom/yarn-1.16.4+build.7-v2-final.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains:annotations:19.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.guava:guava:30.0-jre" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.guava:failureaccess:1.0.1" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.checkerframework:checker-qual:3.5.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.errorprone:error_prone_annotations:2.3.4" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.j2objc:j2objc-annotations:1.3" level="project" />
-    <orderEntry type="library" name="Gradle: com.mojang:patchy:1.1" level="project" />
-    <orderEntry type="library" name="Gradle: oshi-project:oshi-core:1.1" level="project" />
-    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna:4.4.0" level="project" />
-    <orderEntry type="library" name="Gradle: net.java.dev.jna:platform:3.4.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.ibm.icu:icu4j:66.1" level="project" />
-    <orderEntry type="library" name="Gradle: com.mojang:javabridge:1.0.22" level="project" />
-    <orderEntry type="library" name="Gradle: net.sf.jopt-simple:jopt-simple:5.0.3" level="project" />
-    <orderEntry type="library" name="Gradle: io.netty:netty-all:4.1.25.Final" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.5" level="project" />
-    <orderEntry type="library" name="Gradle: commons-io:commons-io:2.5" level="project" />
-    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
-    <orderEntry type="library" name="Gradle: net.java.jinput:jinput:2.0.5" level="project" />
-    <orderEntry type="library" name="Gradle: net.java.jutils:jutils:1.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.mojang:brigadier:1.0.17" level="project" />
-    <orderEntry type="library" name="Gradle: com.mojang:datafixerupper:4.0.26" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.mojang:authlib:1.6.25" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.commons:commons-compress:1.8.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.3.3" level="project" />
-    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.1.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.3.2" level="project" />
-    <orderEntry type="library" name="Gradle: it.unimi.dsi:fastutil:8.2.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.8.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.8.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl:3.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-jemalloc:3.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-openal:3.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-opengl:3.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-glfw:3.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-stb:3.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-tinyfd:3.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: com.mojang:text2speech:1.11.3" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc:tiny-mappings-parser:0.2.2.14" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc:sponge-mixin:0.8.2+build.23" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc:tiny-remapper:0.3.0.70" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc:fabric-loader-sat4j:2.3.5.4" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.jimfs:jimfs:1.2-fabric" level="project" />
-    <orderEntry type="library" name="Gradle: org.ow2.asm:asm:9.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.ow2.asm:asm-analysis:9.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.ow2.asm:asm-commons:9.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.ow2.asm:asm-tree:9.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.ow2.asm:asm-util:9.0" level="project" />
-    <orderEntry type="library" name="Gradle: net.minecraft:minecraft:1.16.3-mapped-net.fabricmc.yarn-1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-api:0.24.1+build.412-1.16@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-api-base:0.2.0+9f0fb4b895@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-biome-api-v1:2.0.0+c29459ab95@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-blockrenderlayer-v1:1.1.4+c6a8ea8995@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-command-api-v1:1.0.8+5ce5339895@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-commands-v0:0.2.0+52d3083695@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-containers-v0:0.1.8+045df74f95@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-content-registries-v0:0.1.9+059ea86695@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-crash-report-info-v1:0.1.2+b7f9825d95@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-events-interaction-v0:0.4.1+f8ac1db295@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-events-lifecycle-v0:0.2.0+16acbe5b95@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-game-rule-api-v1:1.0.2+f8ac1db295@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-item-api-v1:1.2.0+f8ac1db295@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-item-groups-v0:0.2.0+438f963695@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-key-binding-api-v1:1.0.1+730711c695@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-keybindings-v0:0.2.0+3fa9f7c595@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-lifecycle-events-v1:1.2.0+74cc3b2095@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-loot-tables-v1:1.0.1+432ea18895@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-mining-levels-v0:0.1.2+b764ce9995@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-models-v0:0.1.1+f8ac1db295@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-networking-blockentity-v0:0.2.5+b50ffc7b95@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-networking-v0:0.1.10+e00ecb5f95@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-object-builder-api-v1:1.9.0+c270b09895@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-object-builders-v0:0.7.0+432ea18895@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-particles-v1:0.2.2+fb0d9b0e95@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-registry-sync-v0:0.6.0+9f0fb4b895@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-renderer-api-v1:0.3.2+2b46237995@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-renderer-indigo:0.4.2+2b46237995@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-renderer-registries-v1:2.2.0+f8ac1db295@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-rendering-data-attachment-v1:0.1.4+f8ac1db295@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-rendering-fluids-v1:0.1.12+f8ac1db295@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-rendering-v0:1.1.1+f8ac1db295@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-rendering-v1:1.3.1+f8ac1db295@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-resource-loader-v0:0.3.1+facf3bbf95@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-screen-handler-api-v1:1.1.0+8724984195@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-structure-api-v1:1.1.0+f8ac1db295@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-tag-extensions-v0:1.0.3+ac8e8c5995@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-textures-v0:1.0.4+eae12eb895@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-tool-attribute-api-v1:1.2.4+2b46237995@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" name="Gradle: net.fabricmc:fabric-loader:0.10.3+build.211@net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: net.minecrell:terminalconsoleappender:1.2.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: net.fabricmc:dev-launch-injector:0.2.1+build.8" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jline:jline-reader:3.12.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jline:jline-terminal:3.12.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:authlib:2.1.28" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc:sponge-mixin:0.8.2+build.24" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc:access-widener:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.minecraft:minecraft:1.16.4-mapped-net.fabricmc.yarn-1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-api:0.28.4+1.16@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-blockrenderlayer-v1:1.1.4+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-commands-v0:0.2.0+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-command-api-v1:1.0.9+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-containers-v0:0.1.9+a03e98793a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-content-registries-v0:0.2.0+e77439c73a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-dimensions-v1:2.0.1+9a6c75813a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-events-interaction-v0:0.4.1+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-events-lifecycle-v0:0.2.0+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-item-api-v1:1.2.0+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-item-groups-v0:0.2.1+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-lifecycle-events-v1:1.2.0+ffb68a873a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-loot-tables-v1:1.0.1+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-mining-levels-v0:0.1.2+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-models-v0:0.1.1+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-screen-handler-api-v1:1.1.0+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-networking-v0:0.3.1+2a4333d33a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-registry-sync-v0:0.7.3+be155ae23a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-networking-api-v1:1.0.0+4358fbc63a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-networking-blockentity-v0:0.2.7+a03e98793a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-object-builders-v0:0.7.1+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-object-builder-api-v1:1.9.2+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-particles-v1:0.2.2+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-renderer-indigo:0.4.3+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-renderer-api-v1:0.3.3+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-renderer-registries-v1:2.2.0+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-rendering-data-attachment-v1:0.1.4+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-rendering-fluids-v1:0.1.12+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-rendering-v0:1.1.1+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-rendering-v1:1.4.0+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-tool-attribute-api-v1:1.2.5+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-tag-extensions-v0:1.1.0+e77439c73a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-textures-v0:1.0.5+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-api-base:0.2.0+ab87788d3a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-biome-api-v1:3.1.0+2e23b97c3a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-crash-report-info-v1:0.1.2+b7f9825d3a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-game-rule-api-v1:1.0.3+a4467d2a3a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-keybindings-v0:0.2.0+6a2618f53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-key-binding-api-v1:1.0.1+730711c63a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-resource-loader-v0:0.4.0+552549d53a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc.fabric-api:fabric-structure-api-v1:1.1.1+f1d8af063a@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc:fabric-loader:0.10.8@net.fabricmc.yarn.1_16_4.1.16.4+build.7-v2" level="project" />
   </component>
 </module>

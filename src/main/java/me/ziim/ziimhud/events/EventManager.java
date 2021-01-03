@@ -3,6 +3,7 @@ package me.ziim.ziimhud.events;
 import me.ziim.ziimhud.events.packets.ReceivePacket;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.network.Packet;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 public class EventManager {
     private static final OnJoinEvent onJoinEvent = new OnJoinEvent();
@@ -10,6 +11,9 @@ public class EventManager {
     private static final ReceivePacket onRecievePacket = new ReceivePacket();
     private static final Render2DEvent render2DEvent = new Render2DEvent();
     private static final OnKeyPressEvent keyPressEvent = new OnKeyPressEvent();
+    private static final ResolutionChangeEvent resolutionChangeEvent = new ResolutionChangeEvent();
+    private static final FpsTickEvent fpsTickEvent = new FpsTickEvent();
+    private static final SendMessageEvent sendMessageEvent = new SendMessageEvent();
 
     public static OnJoinEvent gameJoinedEvent() {
         return onJoinEvent;
@@ -33,5 +37,21 @@ public class EventManager {
         keyPressEvent.key = key;
         keyPressEvent.scanCode = scanCode;
         return keyPressEvent;
+    }
+
+    public static ResolutionChangeEvent resolutionChangeEvent(CallbackInfo ci) {
+        resolutionChangeEvent.callbackInfo = ci;
+        return resolutionChangeEvent;
+    }
+
+    public static FpsTickEvent fpsUpdateEvent(int fps) {
+//        System.out.println("FPS2?");
+        fpsTickEvent.fps = fps;
+        return fpsTickEvent;
+    }
+
+    public static SendMessageEvent sendMsgEvent(String msg) {
+        sendMessageEvent.msg = msg;
+        return sendMessageEvent;
     }
 }

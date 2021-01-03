@@ -3,6 +3,12 @@
     "me/ziim/ziimhud/mixins/KeyboardMixin": {
       "onKey": "Lnet/minecraft/class_309;method_1466(JIIII)V"
     },
+    "me/ziim/ziimhud/mixins/ClientPlayerEntityMixin": {
+      "sendChatMessage": "Lnet/minecraft/class_746;method_3142(Ljava/lang/String;)V"
+    },
+    "me/ziim/ziimhud/mixins/MinecraftClientMixin": {
+      "tick": "Lnet/minecraft/class_310;method_1574()V"
+    },
     "me/ziim/ziimhud/mixins/InGameHudMixin": {
       "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_4587;F)V"
     },
@@ -18,6 +24,12 @@
     "named:intermediary": {
       "me/ziim/ziimhud/mixins/KeyboardMixin": {
         "onKey": "Lnet/minecraft/class_309;method_1466(JIIII)V"
+      },
+      "me/ziim/ziimhud/mixins/ClientPlayerEntityMixin": {
+        "sendChatMessage": "Lnet/minecraft/class_746;method_3142(Ljava/lang/String;)V"
+      },
+      "me/ziim/ziimhud/mixins/MinecraftClientMixin": {
+        "tick": "Lnet/minecraft/class_310;method_1574()V"
       },
       "me/ziim/ziimhud/mixins/InGameHudMixin": {
         "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_4587;F)V"

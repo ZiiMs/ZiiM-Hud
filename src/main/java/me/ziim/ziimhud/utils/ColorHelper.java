@@ -1,5 +1,7 @@
 package me.ziim.ziimhud.utils;
 
+import java.awt.*;
+
 public class ColorHelper {
 
     public int r, g, b, a;
@@ -30,6 +32,12 @@ public class ColorHelper {
         g = toRGBAG(packed);
         b = toRGBAB(packed);
         a = toRGBAA(packed);
+    }
+
+    public static int getRainbow(float seconds, float saturation, float brightness) {
+        float hue = (System.currentTimeMillis() % (int) (seconds * 1000))/ (seconds * 1000);
+        int color = Color.HSBtoRGB(hue, saturation, brightness);
+        return color;
     }
 
     public ColorHelper(java.awt.Color color) {
