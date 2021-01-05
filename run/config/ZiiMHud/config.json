@@ -1,0 +1,182 @@
+{
+  "armourStorage": {
+    "x": 0.56,
+    "y": 0.92,
+    "scale": 1.0,
+    "enabled": true,
+    "textColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "dataColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    }
+  },
+  "tpsStorage": {
+    "x": 1.0,
+    "y": 0.92,
+    "scale": 1.0,
+    "enabled": true,
+    "textColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "dataColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128,
+      "a": 255
+    }
+  },
+  "pingStorage": {
+    "x": 1.0,
+    "y": 0.86011344,
+    "scale": 1.0,
+    "enabled": true,
+    "textColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "dataColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128,
+      "a": 255
+    }
+  },
+  "biomeStorage": {
+    "x": 1.0,
+    "y": 1.0,
+    "scale": 1.0,
+    "enabled": true,
+    "textColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "dataColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128,
+      "a": 255
+    }
+  },
+  "posStorage": {
+    "x": 1.0,
+    "y": 0.96,
+    "scale": 1.0,
+    "enabled": true,
+    "textColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "dataColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128,
+      "a": 255
+    }
+  },
+  "netherPosStorage": {
+    "x": 1.0,
+    "y": 0.98,
+    "scale": 1.0,
+    "enabled": true,
+    "textColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "dataColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128,
+      "a": 255
+    }
+  },
+  "directionStorage": {
+    "x": 1.0,
+    "y": 0.94,
+    "scale": 1.0,
+    "enabled": true,
+    "textColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "dataColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128,
+      "a": 255
+    }
+  },
+  "fpsStorage": {
+    "x": 1.0,
+    "y": 0.88090736,
+    "scale": 1.0,
+    "enabled": true,
+    "textColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "dataColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128,
+      "a": 255
+    }
+  },
+  "timeStorage": {
+    "x": 1.0,
+    "y": 0.89981097,
+    "scale": 1.0,
+    "enabled": true,
+    "textColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "dataColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128,
+      "a": 255
+    }
+  },
+  "xpStorage": {
+    "x": 1.0,
+    "y": 0.84,
+    "scale": 1.0,
+    "enabled": true,
+    "textColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "dataColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128,
+      "a": 255
+    }
+  }
+}

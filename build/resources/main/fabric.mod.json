@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "ziimhud",
+  "version": "2.1",
+  "name": "ZiiM Hud",
+  "description": "A simple hud mod",
+  "authors": [
+    "ZiiM"
+  ],
+  "contact": {
+    "website": "github.com/ziims",
+    "repo": "github.com/ziims"
+  },
+  "license": "MIT",
+  "icon": "assets/ziimhud/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.ziim.ziimhud.Ziimhud"
+    ]
+  },
+  "mixins": [
+    "ziimhud.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.10.3+build.211",
+    "fabric": "*",
+    "minecraft": "1.16.4"
+  }
+}
