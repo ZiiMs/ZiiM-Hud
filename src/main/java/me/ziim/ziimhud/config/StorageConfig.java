@@ -6,6 +6,7 @@ import me.ziim.ziimhud.modules.CoordModules.NetherPos;
 import me.ziim.ziimhud.modules.CoordModules.Pos;
 import me.ziim.ziimhud.modules.Direction.Direction;
 import me.ziim.ziimhud.modules.FPS.FPS;
+import me.ziim.ziimhud.modules.IP.IP;
 import me.ziim.ziimhud.modules.Ping.Ping;
 import me.ziim.ziimhud.modules.TPS.TPS;
 import me.ziim.ziimhud.modules.Time.Time;
@@ -22,4 +23,5 @@ public class StorageConfig {
     public FPS.Storage fpsStorage = new FPS.Storage();
     public Time.Storage timeStorage = new Time.Storage();
     public XP.Storage xpStorage = new XP.Storage();
+    public IP.Storage ipStorage = new IP.Storage();
 }
