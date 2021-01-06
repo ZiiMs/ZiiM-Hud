@@ -1,3 +1,0 @@
-v1	named	intermediary
-FIELD	me/ziim/ziimhud/mixins/MinecraftClientMixin	I	currentFps	field_1738
-METHOD	me/ziim/ziimhud/mixins/ClientPlayerEntityMixin	(Ljava/lang/String;)V	sendChatMessage	method_3142

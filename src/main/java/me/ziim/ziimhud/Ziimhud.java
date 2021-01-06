@@ -11,6 +11,7 @@ import me.ziim.ziimhud.modules.CoordModules.NetherPos;
 import me.ziim.ziimhud.modules.CoordModules.Pos;
 import me.ziim.ziimhud.modules.Direction.Direction;
 import me.ziim.ziimhud.modules.FPS.FPS;
+import me.ziim.ziimhud.modules.IP.IP;
 import me.ziim.ziimhud.modules.Ping.Ping;
 import me.ziim.ziimhud.modules.TPS.TPS;
 import me.ziim.ziimhud.modules.Time.Time;
@@ -53,6 +54,7 @@ public class Ziimhud implements ClientModInitializer {
         WidgetManager.INSTANCE.add(new FPS());
         WidgetManager.INSTANCE.add(new Time());
         WidgetManager.INSTANCE.add(new XP());
+        WidgetManager.INSTANCE.add(new IP());
 
         EVENT_BUS.register(WidgetManager.INSTANCE);
     }
