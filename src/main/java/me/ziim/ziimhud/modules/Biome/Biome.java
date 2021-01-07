@@ -60,11 +60,15 @@ public class Biome extends AbstractWidget {
     @Override
     public LiteralText getData() {
         String tempBiome = client.world.getRegistryManager().get(Registry.BIOME_KEY).getId(client.world.getBiome(client.player.getBlockPos())).toString();
-        String[] splitBiome = tempBiome.split("minecraft:");
-        String biome = Arrays.stream(splitBiome[1].split("_")).map(StringUtils::capitalize).collect(Collectors.joining(" "));
-        LiteralText data = new LiteralText(biome);
-        data.styled(style -> style.withColor(TextColor.fromRgb(getStorage().dataColor.getPacked())));
-        return data;
+        String[] splitBiome = tempBiome.split(":");
+        if(splitBiome.length > 1) {
+            String biome = Arrays.stream(splitBiome[1].split("_")).map(StringUtils::capitalize).collect(Collectors.joining(" "));
+            LiteralText data = new LiteralText(biome);
+            data.styled(style -> style.withColor(TextColor.fromRgb(getStorage().dataColor.getPacked())));
+            return data;
+        }
+        return new LiteralText("N/A");
+
     }
 
     @Override

@@ -127,7 +127,7 @@
       <recent name="me.ziim.ziimhud.Commands.commands" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.ziimhud build">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-14.0.2" />
       <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main" />
