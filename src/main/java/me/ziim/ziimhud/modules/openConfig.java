@@ -15,7 +15,7 @@ public class openConfig {
         if (InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(), GLFW.GLFW_KEY_F3)) return;
         if (e.key == GLFW.GLFW_KEY_P && Ziimhud.mc.currentScreen == null) {
             MoveScreen abstactWindow = new MoveScreen();
-            MinecraftClient.getInstance().openScreen(abstactWindow);
+            MinecraftClient.getInstance().setScreen(abstactWindow);
         }
     }
 }
