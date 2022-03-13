@@ -59,7 +59,7 @@ public class Biome extends AbstractWidget {
 
     @Override
     public LiteralText getData() {
-        String tempBiome = client.world.getRegistryManager().get(Registry.BIOME_KEY).getId(client.world.getBiome(client.player.getBlockPos())).toString();
+        String tempBiome = client.world.getRegistryManager().get(Registry.BIOME_KEY).getId(client.world.getBiome(client.player.getBlockPos()).value()).toString();
         String[] splitBiome = tempBiome.split(":");
         if(splitBiome.length > 1) {
             String biome = Arrays.stream(splitBiome[1].split("_")).map(StringUtils::capitalize).collect(Collectors.joining(" "));

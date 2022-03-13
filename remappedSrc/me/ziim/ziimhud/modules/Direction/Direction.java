@@ -75,7 +75,7 @@ public class Direction extends AbstractWidget {
     public LiteralText getData() {
         LiteralText data;
         if (client.player != null) {
-            data = new LiteralText(String.format("(%.1f, %.1f)", MathHelper.wrapDegrees(client.player.yaw), MathHelper.wrapDegrees(client.player.pitch)));
+            data = new LiteralText(String.format("(%.1f, %.1f)", MathHelper.wrapDegrees(client.player.getYaw()), MathHelper.wrapDegrees(client.player.getPitch())));
         } else {
             data = new LiteralText("0,0");
         }
