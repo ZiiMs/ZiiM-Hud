@@ -6,7 +6,7 @@ import me.ziim.ziimhud.gui.Vector2D;
 import me.ziim.ziimhud.utils.ColorHelper;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
 import net.minecraft.util.Identifier;
 
@@ -43,20 +43,20 @@ public class XP extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getData() {
-        LiteralText data;
+    public MutableText getData() {
+        MutableText data;
         if (client.player == null) {
-            data = new LiteralText("0");
+            data = Text.literal("0");
         } else {
-            data = new LiteralText(String.format("%.0f%%", client.player.experienceProgress * 100));
+            data = Text.literal(String.format("%.0f%%", client.player.experienceProgress * 100));
         }
         data.styled(style -> style.withColor(TextColor.fromRgb(getStorage().dataColor.getPacked())));
         return data;
     }
 
     @Override
-    public LiteralText getText() {
-        LiteralText text = new LiteralText("XP: ");
+    public MutableText getText() {
+        MutableText text = Text.literal("XP: ");
         text.styled(style -> style.withColor(TextColor.fromRgb(getStorage().textColor.getPacked())));
 
         return text;

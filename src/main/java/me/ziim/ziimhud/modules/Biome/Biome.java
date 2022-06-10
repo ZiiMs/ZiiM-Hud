@@ -6,7 +6,8 @@ import me.ziim.ziimhud.gui.Vector2D;
 import me.ziim.ziimhud.utils.ColorHelper;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -58,22 +59,22 @@ public class Biome extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getData() {
+    public MutableText getData() {
         String tempBiome = client.world.getRegistryManager().get(Registry.BIOME_KEY).getId(client.world.getBiome(client.player.getBlockPos()).value()).toString();
         String[] splitBiome = tempBiome.split(":");
         if(splitBiome.length > 1) {
             String biome = Arrays.stream(splitBiome[1].split("_")).map(StringUtils::capitalize).collect(Collectors.joining(" "));
-            LiteralText data = new LiteralText(biome);
+            MutableText data = Text.literal(biome);
             data.styled(style -> style.withColor(TextColor.fromRgb(getStorage().dataColor.getPacked())));
             return data;
         }
-        return new LiteralText("N/A");
+        return Text.literal("N/A");
 
     }
 
     @Override
-    public LiteralText getText() {
-        LiteralText text = new LiteralText("Biome: ");
+    public MutableText getText() {
+        MutableText text = Text.literal("Biome: ");
         text.styled(style -> style.withColor(TextColor.fromRgb(getStorage().textColor.getPacked())));
         return text;
     }

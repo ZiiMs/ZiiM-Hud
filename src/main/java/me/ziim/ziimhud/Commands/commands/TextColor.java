@@ -8,7 +8,7 @@ import me.ziim.ziimhud.gui.AbstractWidget;
 import me.ziim.ziimhud.gui.WidgetManager;
 import me.ziim.ziimhud.utils.ColorHelper;
 import net.minecraft.command.CommandSource;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 
 import static com.mojang.brigadier.Command.SINGLE_SUCCESS;
 
@@ -37,11 +37,11 @@ public class TextColor extends Command {
                                                 }
                                             }
                                             if (widget == null) {
-                                                mc.inGameHud.getChatHud().addMessage(new LiteralText("Widget not found!!"));
+                                                mc.inGameHud.getChatHud().addMessage(Text.literal("Widget not found!!"));
                                                 return SINGLE_SUCCESS;
                                             }
                                             widget.setTextColor(new ColorHelper(r, g, b));
-                                            mc.inGameHud.getChatHud().addMessage(new LiteralText(widget.getText().asString() + " color changed to: ").append(new LiteralText(r + " " + g + " " + b).styled(style -> style.withColor(net.minecraft.text.TextColor.fromRgb(new ColorHelper(r, g, b).getPacked())))));
+                                            mc.inGameHud.getChatHud().addMessage(Text.literal(widget.getText().toString() + " color changed to: ").append(Text.literal(r + " " + g + " " + b).styled(style -> style.withColor(net.minecraft.text.TextColor.fromRgb(new ColorHelper(r, g, b).getPacked())))));
                                             return SINGLE_SUCCESS;
                                         })))));
     }

@@ -3,7 +3,7 @@ package me.ziim.ziimhud.gui;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 
 import java.util.Optional;
@@ -16,7 +16,7 @@ public class MoveScreen extends Screen {
 
 
     public MoveScreen() {
-        super(new LiteralText(""));
+        super(Text.literal(""));
         System.out.println("Opening screen");
         mc = MinecraftClient.getInstance();
     }

@@ -8,7 +8,8 @@ import me.ziim.ziimhud.utils.EventHelper;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
 import net.minecraft.util.Identifier;
 
@@ -53,15 +54,15 @@ public class TPS extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getData() {
-        LiteralText data = new LiteralText(String.format("%.1f", EventHelper.INSTANCE.getTickRate()));
+    public MutableText getData() {
+        MutableText data = Text.literal(String.format("%.1f", EventHelper.INSTANCE.getTickRate()));
         data.styled(style -> style.withColor(TextColor.fromRgb(getStorage().dataColor.getPacked())));
         return data;
     }
 
     @Override
-    public LiteralText getText() {
-        LiteralText text = new LiteralText("TickRate: ");
+    public MutableText getText() {
+        MutableText text = Text.literal("TickRate: ");
         text.styled(style -> style.withColor(TextColor.fromRgb(getStorage().textColor.getPacked())));
 
         return text;

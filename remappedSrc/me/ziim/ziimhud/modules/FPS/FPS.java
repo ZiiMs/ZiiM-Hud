@@ -7,7 +7,7 @@ import me.ziim.ziimhud.utils.ColorHelper;
 import me.ziim.ziimhud.utils.EventHelper;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
 import net.minecraft.util.Identifier;
 
@@ -52,15 +52,15 @@ public class FPS extends AbstractWidget {
 
 
     @Override
-    public LiteralText getData() {
-        LiteralText data = new LiteralText(Integer.toString(EventHelper.getFps()));
+    public MutableText getData() {
+        MutableText data = Text.literal(Integer.toString(EventHelper.getFps()));
         data.styled(style -> style.withColor(TextColor.fromRgb(getStorage().dataColor.getPacked())));
         return data;
     }
 
     @Override
-    public LiteralText getText() {
-        LiteralText text = new LiteralText("FPS: ");
+    public MutableText getText() {
+        MutableText text = Text.literal("FPS: ");
         text.styled(style -> style.withColor(TextColor.fromRgb(getStorage().textColor.getPacked())));
         return text;
     }

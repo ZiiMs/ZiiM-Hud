@@ -7,7 +7,8 @@ import me.ziim.ziimhud.utils.ColorHelper;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
 import net.minecraft.util.Identifier;
 
@@ -23,13 +24,13 @@ public class Ping extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getData() {
-        LiteralText data;
+    public MutableText getData() {
+        MutableText data;
         PlayerListEntry playerListEntry = Ziimhud.mc.getNetworkHandler().getPlayerListEntry(Ziimhud.mc.player.getUuid());
         if (playerListEntry != null) {
-            data = new LiteralText(String.format("%d", playerListEntry.getLatency()));
+            data = Text.literal(String.format("%d", playerListEntry.getLatency()));
         } else {
-            data = new LiteralText("0");
+            data = Text.literal("0");
         }
         data.styled(style -> style.withColor(TextColor.fromRgb(getStorage().dataColor.getPacked())));
         return data;
@@ -65,8 +66,8 @@ public class Ping extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getText() {
-        LiteralText text = new LiteralText("Ping: ");
+    public MutableText getText() {
+        MutableText text = Text.literal("Ping: ");
         text.styled(style -> style.withColor(TextColor.fromRgb(getStorage().textColor.getPacked())));
         return text;
     }

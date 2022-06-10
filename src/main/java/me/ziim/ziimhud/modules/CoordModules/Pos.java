@@ -7,7 +7,8 @@ import me.ziim.ziimhud.utils.ColorHelper;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
@@ -52,13 +53,13 @@ public class Pos extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getData() {
-        LiteralText data;
+    public MutableText getData() {
+        MutableText data;
 
         if (client.player != null) {
-            data = new LiteralText(String.format("%s", getCoords(client.player)));
+            data = Text.literal(String.format("%s", getCoords(client.player)));
         } else {
-            data = new LiteralText("0,0,0");
+            data = Text.literal("0,0,0");
         }
         data.styled(style -> style.withColor(TextColor.fromRgb(getStorage().dataColor.getPacked())));
         return data;
@@ -76,8 +77,8 @@ public class Pos extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getText() {
-        LiteralText text = new LiteralText("Pos: ");
+    public MutableText getText() {
+        MutableText text = Text.literal("Pos: ");
         text.styled(style -> style.withColor(TextColor.fromRgb(getStorage().textColor.getPacked())));
         return text;
     }

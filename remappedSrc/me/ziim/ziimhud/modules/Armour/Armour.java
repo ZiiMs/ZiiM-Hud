@@ -8,7 +8,7 @@ import me.ziim.ziimhud.utils.ItemHelper;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.awt.*;
@@ -61,12 +61,12 @@ public class Armour extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getData() {
+    public MutableText getData() {
         return null;
     }
 
     @Override
-    public LiteralText getText() {
+    public MutableText getText() {
         return null;
     }
 

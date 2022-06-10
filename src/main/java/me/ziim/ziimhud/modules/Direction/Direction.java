@@ -6,7 +6,8 @@ import me.ziim.ziimhud.gui.Vector2D;
 import me.ziim.ziimhud.utils.ColorHelper;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
@@ -72,12 +73,12 @@ public class Direction extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getData() {
-        LiteralText data;
+    public MutableText getData() {
+        MutableText data;
         if (client.player != null) {
-            data = new LiteralText(String.format("(%.1f, %.1f)", MathHelper.wrapDegrees(client.player.getYaw()), MathHelper.wrapDegrees(client.player.getPitch())));
+            data = Text.literal(String.format("(%.1f, %.1f)", MathHelper.wrapDegrees(client.player.getYaw()), MathHelper.wrapDegrees(client.player.getPitch())));
         } else {
-            data = new LiteralText("0,0");
+            data = Text.literal("0,0");
         }
         data.styled(style -> style.withColor(TextColor.fromRgb(getStorage().dataColor.getPacked())));
         return data;
@@ -85,8 +86,8 @@ public class Direction extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getText() {
-        LiteralText text =new LiteralText(getDirection());
+    public MutableText getText() {
+        MutableText text =Text.literal(getDirection());
         text.styled(style -> style.withColor(TextColor.fromRgb(getStorage().textColor.getPacked())));
         return text;
     }

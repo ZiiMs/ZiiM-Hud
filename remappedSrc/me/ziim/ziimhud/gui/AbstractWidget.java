@@ -6,7 +6,7 @@ import me.ziim.ziimhud.events.ResolutionChangeEvent;
 import me.ziim.ziimhud.utils.ColorHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
@@ -57,9 +57,9 @@ public abstract class AbstractWidget {
 
     public abstract void render(MatrixStack matrices);
 
-    public abstract LiteralText getData();
+    public abstract MutableText getData();
 
-    public abstract LiteralText getText();
+    public abstract MutableText getText();
 
     public void renderHud(MatrixStack matrices) {
         if (client == null) {

@@ -9,7 +9,7 @@ import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
 import net.minecraft.util.Identifier;
 
@@ -54,7 +54,7 @@ public class Potions extends AbstractWidget {
         int i = 1;
         for (StatusEffectInstance statusEffectInstance : client.player.getStatusEffects()) {
             Vector2D pos = getScaledPos();
-            LiteralText string = new LiteralText(String.format("%s %d (%s)", statusEffectInstance.getEffectType().getName().getString(), statusEffectInstance.getAmplifier(), statusEffectInstance.getDuration()));
+            MutableText string = Text.literal(String.format("%s %d (%s)", statusEffectInstance.getEffectType().getName().getString(), statusEffectInstance.getAmplifier(), statusEffectInstance.getDuration()));
 //            width = Math.max(width, client.textRenderer.getWidth(string));
 //            height += client.textRenderer.fontHeight;
             string.styled(style -> style.withColor(TextColor.fromRgb(statusEffectInstance.getEffectType().getColor())));
@@ -67,12 +67,12 @@ public class Potions extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getData() {
-        LiteralText data = new LiteralText("");
+    public MutableText getData() {
+        MutableText data = Text.literal("");
         height = 2;
         width = 0;
         for (StatusEffectInstance statusEffectInstance : client.player.getStatusEffects()) {
-            LiteralText string = new LiteralText(String.format("%s %d (%s)\n", statusEffectInstance.getEffectType().getName().getString(), statusEffectInstance.getAmplifier(), statusEffectInstance.getDuration()));
+            MutableText string = Text.literal(String.format("%s %d (%s)\n", statusEffectInstance.getEffectType().getName().getString(), statusEffectInstance.getAmplifier(), statusEffectInstance.getDuration()));
             width = Math.max(width, client.textRenderer.getWidth(string));
             height += client.textRenderer.fontHeight;
         }
@@ -82,8 +82,8 @@ public class Potions extends AbstractWidget {
     }
 
     @Override
-    public LiteralText getText() {
-        LiteralText text = new LiteralText("Potions (0:00)");
+    public MutableText getText() {
+        MutableText text = Text.literal("Potions (0:00)");
         text.styled(style -> style.withColor(TextColor.fromRgb(getStorage().textColor.getPacked())));
 
         return text;
