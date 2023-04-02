@@ -20,7 +20,7 @@ public class ItemHelper {
 
     public static int getCount(MinecraftClient client, ItemStack stack) {
         if (client.player == null) return 0;
-        PlayerInventory inv = client.player.inventory;
+        PlayerInventory inv = client.player.getInventory();
         ItemStack compare = stack.copy();
         compare.setCount(0);
         for (int i = 0; i < inv.size(); i++) {
@@ -36,7 +36,7 @@ public class ItemHelper {
     public static List<ItemStack> getArmour(MinecraftClient client) {
         List<ItemStack> armour = new ArrayList<>();
         if (client.player == null) return armour;
-        PlayerInventory inv = client.player.inventory;
+        PlayerInventory inv = client.player.getInventory();
         inv.armor.forEach(stack -> {
             if (!stack.isItemEqualIgnoreDamage(new ItemStack(Items.AIR))) {
                 armour.add(stack);
@@ -49,7 +49,7 @@ public class ItemHelper {
         List<ItemStack> combined = new ArrayList<>();
         List<ItemStack> equiped = new ArrayList<>();
         if (client.player == null) return equiped;
-        PlayerInventory inv = client.player.inventory;
+        PlayerInventory inv = client.player.getInventory();
         combined.addAll(inv.armor);
         combined.add(inv.getMainHandStack());
         combined.addAll(inv.offHand);
@@ -63,7 +63,7 @@ public class ItemHelper {
     }
 
     public static void drawItem(MatrixStack matrices, MinecraftClient client, ItemStack item, int x, int y, boolean text) {
-        client.getItemRenderer().renderInGuiWithOverrides(client.player, item, x, y);
+        client.getItemRenderer().renderInGuiWithOverrides(item, x, y);
         if (text) {
             client.getItemRenderer().renderGuiItemOverlay(client.textRenderer, item, x, y);
         }

@@ -8,8 +8,8 @@ public class DrawHelper {
 
 
     public void drawStringConcat(MatrixStack stack, TextRenderer textRenderer, String text1, String text2, int x, int y, ColorHelper color1, ColorHelper color2) {
-        DrawableHelper.drawCenteredString(stack, textRenderer, text1, x, y, color1.getPacked());
-        DrawableHelper.drawCenteredString(stack, textRenderer, text2, x + textRenderer.getWidth(text2), y, color2.getPacked());
+        DrawableHelper.drawCenteredText(stack, textRenderer, text1, x, y, color1.getPacked());
+        DrawableHelper.drawCenteredText(stack, textRenderer, text2, x + textRenderer.getWidth(text2), y, color2.getPacked());
     }
 
 }
